@@ -50,20 +50,20 @@ insulinDosage.value = insulinUnits.toFixed(2);
 
 <template>
   <div class="calculator">
-    <h1>Insulin Calculator</h1>
-    <p>Enter your blood sugar and carbohydrate intake to calculate your insulin dosage.</p>
+    <h1>Insuline de la Tile</h1>
+    <p>Calcule ta dose d'insuline FIASP selon ta glycémie et tes glucides à ingérer.</p>
     <form @submit.prevent="calculateInsulin" class="p-3">
         <div class="mb-3">
-      <label for="blood-sugar" class="form-label">Blood Sugar</label>
+      <label for="blood-sugar" class="form-label">Glycémie (g/L)</label>
       <input type="number" class="form-control" id="blood-sugar" name="blood-sugar" v-model="bloodSugar" step="0.01" />
         </div>  
         <div class="mb-3">
-      <label for="carbs" class="form-label">Carbohydrates</label>
+      <label for="carbs" class="form-label">Glucides (g)</label>
       <input type="number" class="form-control" id="carbs" name="carbs" v-model="carbs" step="0.01" />
         </div>
       <button type="submit" class="btn btn-primary">Calculate</button>
     </form>
-    <p v-if="insulinDosage">Your insulin dosage is: {{ insulinDosage }}</p>
+    <p v-if="insulinDosage">Ta dose de FIASP est: {{ insulinDosage }}</p>
     
   </div>
 </template>
